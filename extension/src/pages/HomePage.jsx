@@ -1,9 +1,9 @@
 import { Typography, Box, Button, Grid } from "@mui/material";
-import logo from "../logo.png";
-import startImage from "../startImage.png";
+import logo from "../logo.svg";
+import startImage from "../startImg.svg";
 import MenuIcon from "@mui/icons-material/Menu";
 
-export default function PopUp() {
+export default function HomePage() {
   return (
     <Box
       sx={{
@@ -21,7 +21,7 @@ export default function PopUp() {
         <MenuIcon
           sx={{ paddingLeft: "240px", paddingTop: "10px", color: "white" }}
         />
-        <img src={logo} style={{ maxWidth: "100px" }} />
+        <img src={logo} style={{ maxWidth: "100px" }} alt="logo" />
         <Typography
           variant="subtitle 6"
           align="center"
@@ -64,6 +64,7 @@ export default function PopUp() {
         <img
           src={startImage}
           style={{ maxWidth: "300px", position: "absolute", bottom: 0 }}
+          alt="start"
         />
       </Box>
     </Box>
