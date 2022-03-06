@@ -2,8 +2,10 @@ import { Typography, Box, Button, Grid } from "@mui/material";
 import logo from "../images/logo.svg";
 import MenuIcon from "@mui/icons-material/Menu";
 import heart from "../images/heart.png";
+import { useNavigate } from "react-router-dom";
 
 export default function UkrainePage() {
+  const navigate = useNavigate();
   return (
     <Box
       sx={{
@@ -55,6 +57,7 @@ export default function UkrainePage() {
                   borderRadius: "20px",
                   alignSelf: "center",
                 }}
+                onClick={() => navigate("/ukraine-resources")}
               >
                 Yes
               </Button>
