@@ -2,8 +2,11 @@ import { Typography, Box, Button, Grid } from "@mui/material";
 import logo from "../logo.svg";
 import startImage from "../startImg.svg";
 import MenuIcon from "@mui/icons-material/Menu";
+import { useNavigate } from "react-router-dom";
 
 export default function HomePage() {
+  const navigate = useNavigate();
+
   return (
     <Box
       sx={{
@@ -23,7 +26,7 @@ export default function HomePage() {
         />
         <img src={logo} style={{ maxWidth: "100px" }} alt="logo" />
         <Typography
-          variant="subtitle 6"
+          variant="subtitle2"
           align="center"
           sx={{
             fontStyle: "italic",
@@ -48,6 +51,7 @@ export default function HomePage() {
             textTransform: "none",
             boxShadow: "0px 2px 3px 0px #74bafe",
           }}
+          onClick={() => navigate("/status")}
         >
           Get Started
         </Button>
