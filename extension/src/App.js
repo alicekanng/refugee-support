@@ -1,23 +1,14 @@
-import logo from './logo.svg';
+import PopUp from "./components/PopUp";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import "@fontsource/montserrat";
+
+const theme = createTheme({ fontFamily: "Montserrat" });
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Testing changes
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <PopUp />
+    </ThemeProvider>
   );
 }
 
