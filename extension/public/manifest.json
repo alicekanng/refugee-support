@@ -1,5 +1,6 @@
 {
-  "name": "Refugee Support",
+  "name": "Seek Refuge",
+  "description": "A chrome extension to support refugees find their safe space overseas.",
   "version": "1.0",
   "manifest_version": 3,
   "action": {
