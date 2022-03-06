@@ -3,7 +3,7 @@ import { getFirestore, getDocs, collection } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import Header from "../components/Header";
 import { Typography, Box, Grid, Button } from "@mui/material";
-import logo from "../images/logo_no_text.svg";
+import bulletPoint from "../images/bulletPoint.svg";
 import { useNavigate } from "react-router-dom";
 
 const firebaseConfig = {
@@ -89,7 +89,7 @@ export default function CityServices() {
         >
           {Object.keys(services).map((name, index) => (
             <Grid item display="flex" flexDirection="row" margin="0px 10px">
-              <img src={logo} style={{ maxWidth: "30px" }} alt="logo" />
+              <img src={bulletPoint} style={{ maxWidth: "20px" }} alt="logo" />
               <Typography
                 variant="subtitle1"
                 sx={{
@@ -98,6 +98,7 @@ export default function CityServices() {
                   fontWeight: 1000,
                   fontSize: "12px",
                   minWidth: "250px",
+                  lineHeight: "200%",
                 }}
                 onClick={(e) => handleMapRender(index)}
               >
@@ -119,6 +120,9 @@ export default function CityServices() {
             boxShadow: "0px 2px 3px 0px #74bafe",
             borderRadius: "20px",
             alignSelf: "center",
+            ":hover": {
+              backgroundColor: "#32D47A",
+            },
           }}
           onClick={() => navigate("/")}
         >

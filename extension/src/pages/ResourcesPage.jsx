@@ -50,6 +50,9 @@ export default function ResourcesPage() {
               maxWidth: "230px",
               marginTop: "50px",
               boxShadow: "0px 2px 3px 0px #74bafe",
+              ":hover": {
+                backgroundColor: "#7EEDB5",
+              },
             }}
             onClick={() =>
               chrome.tabs.update(
@@ -83,6 +86,9 @@ export default function ResourcesPage() {
               maxWidth: "230px",
               marginTop: "20px",
               boxShadow: "0px 2px 3px 0px #74bafe",
+              ":hover": {
+                backgroundColor: "#7EEDB5",
+              },
             }}
             onClick={() =>
               chrome.tabs.update(
@@ -121,6 +127,9 @@ export default function ResourcesPage() {
               boxShadow: "0px 2px 3px 0px #74bafe",
               borderRadius: "20px",
               alignSelf: "center",
+              ":hover": {
+                backgroundColor: "#32D47A",
+              },
             }}
             onClick={() => navigate("/checklist")}
           >

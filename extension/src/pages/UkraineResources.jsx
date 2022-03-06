@@ -48,6 +48,9 @@ export default function UkraineResources() {
               maxWidth: "230px",
               marginTop: "50px",
               boxShadow: "0px 2px 3px 0px #74bafe",
+              ":hover": {
+                backgroundColor: "#7EEDB5",
+              },
             }}
             onClick={() =>
               chrome.tabs.update(
@@ -81,6 +84,9 @@ export default function UkraineResources() {
               maxWidth: "230px",
               marginTop: "20px",
               boxShadow: "0px 2px 3px 0px #74bafe",
+              ":hover": {
+                backgroundColor: "#7EEDB5",
+              },
             }}
             onClick={() =>
               chrome.tabs.update(
@@ -130,6 +136,9 @@ export default function UkraineResources() {
               maxWidth: "230px",
               marginTop: "20px",
               boxShadow: "0px 2px 3px 0px #74bafe",
+              ":hover": {
+                backgroundColor: "#7EEDB5",
+              },
             }}
             onClick={() =>
               chrome.tabs.update(

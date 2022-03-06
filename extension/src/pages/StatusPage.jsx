@@ -36,6 +36,9 @@ export default function StatusPage() {
               maxWidth: "250px",
               zIndex: 2,
               marginTop: "-20px",
+              ":hover": {
+                backgroundColor: "#7EEDB5",
+              },
             }}
           >
             <Typography
@@ -75,6 +78,9 @@ export default function StatusPage() {
               maxWidth: "250px",
               zIndex: 2,
               marginTop: "-20px",
+              ":hover": {
+                backgroundColor: "#7EEDB5",
+              },
             }}
           >
             <Typography

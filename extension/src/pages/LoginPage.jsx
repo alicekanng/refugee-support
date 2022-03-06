@@ -134,6 +134,9 @@ export default function LoginPage() {
             textTransform: "none",
             boxShadow: "0px 2px 3px 0px #74bafe",
             borderRadius: "20px",
+            ":hover": {
+              backgroundColor: "#32D47A",
+            },
           }}
           onClick={() => navigate("/services")}
         >

@@ -56,6 +56,9 @@ export default function UkrainePage() {
                   boxShadow: "0px 2px 3px 0px #74bafe",
                   borderRadius: "20px",
                   alignSelf: "center",
+                  ":hover": {
+                    backgroundColor: "#32D47A",
+                  },
                 }}
                 onClick={() => navigate("/ukraine-resources")}
               >
@@ -75,6 +78,9 @@ export default function UkrainePage() {
                   boxShadow: "0px 2px 3px 0px #74bafe",
                   borderRadius: "20px",
                   alignSelf: "center",
+                  ":hover": {
+                    backgroundColor: "#32D47A",
+                  },
                 }}
                 onClick={() => navigate("/checklist")}
               >
