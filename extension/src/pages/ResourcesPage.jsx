@@ -1,5 +1,5 @@
 import Header from "../components/Header";
-import { Typography, Box, Button, Grid, Divider, Link } from "@mui/material";
+import { Typography, Box, Button, Grid, Divider } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 export default function ResourcesPage() {

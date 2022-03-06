@@ -2,8 +2,9 @@ import { initializeApp } from "firebase/app";
 import { getFirestore, getDocs, collection } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import Header from "../components/Header";
-import { Typography, Box, Grid } from "@mui/material";
+import { Typography, Box, Grid, Button } from "@mui/material";
 import logo from "../images/logo_no_text.svg";
+import { useNavigate } from "react-router-dom";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBKtFQ4tryDyCDl_SgP1li3SNpZ5C2DsbI",
@@ -18,8 +19,16 @@ const firebaseConfig = {
 const firebaseapp = initializeApp(firebaseConfig);
 const db = getFirestore();
 
+const convertToNormalCase = (s) => {
+  return s
+    .split("_")
+    .map((n) => `${n.charAt(0).toUpperCase() + n.slice(1)}`)
+    .join(" ");
+};
+
 export default function CityServices() {
   const [services, setServices] = useState({});
+  const navigate = useNavigate();
 
   useEffect(() => {
     const getAllData = async () => {
@@ -36,6 +45,15 @@ export default function CityServices() {
     };
     getAllData();
   }, []);
+
+  const handleMapRender = (index) => {
+    const name = Object.keys(services)[index];
+    const encoded = encodeURIComponent(convertToNormalCase(name));
+    chrome.tabs.create(
+      { url: `https://www.google.com/maps/search/?api=1&query=${encoded}` },
+      undefined
+    );
+  };
 
   return (
     <Box
@@ -69,7 +87,7 @@ export default function CityServices() {
           alignItems="flex-start"
           paddingTop="20px"
         >
-          {Object.keys(services).map((name) => (
+          {Object.keys(services).map((name, index) => (
             <Grid item display="flex" flexDirection="row" margin="0px 10px">
               <img src={logo} style={{ maxWidth: "30px" }} alt="logo" />
               <Typography
@@ -81,15 +99,31 @@ export default function CityServices() {
                   fontSize: "12px",
                   minWidth: "250px",
                 }}
+                onClick={(e) => handleMapRender(index)}
               >
-                {name
-                  .split("_")
-                  .map((n) => `${n.charAt(0).toUpperCase() + n.slice(1)}`)
-                  .join(" ")}
+                {convertToNormalCase(name)}
               </Typography>
             </Grid>
           ))}
         </Grid>
+        <Button
+          display="flex"
+          variant="contained"
+          sx={{
+            maxHeight: "35px",
+            marginTop: "50px",
+            background: "#7EEDB5",
+            fontFamily: "Montserrat",
+            fontWeight: 600,
+            textTransform: "none",
+            boxShadow: "0px 2px 3px 0px #74bafe",
+            borderRadius: "20px",
+            alignSelf: "center",
+          }}
+          onClick={() => navigate("/")}
+        >
+          Back To Home
+        </Button>
       </Grid>
     </Box>
   );
