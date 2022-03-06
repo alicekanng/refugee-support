@@ -2,8 +2,10 @@ import Header from "../components/Header";
 import { Typography, Box, Button, Grid } from "@mui/material";
 import { Input } from "@chakra-ui/input";
 import shield from "../images/shield.svg";
+import { useNavigate } from "react-router-dom";
 
 export default function LoginPage() {
+  const navigate = useNavigate();
   return (
     <Box
       sx={{
@@ -133,6 +135,7 @@ export default function LoginPage() {
             boxShadow: "0px 2px 3px 0px #74bafe",
             borderRadius: "20px",
           }}
+          onClick={() => navigate("/services")}
         >
           Next
         </Button>
