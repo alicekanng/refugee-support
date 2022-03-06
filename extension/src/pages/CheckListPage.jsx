@@ -10,8 +10,10 @@ import {
 } from "@mui/material";
 import Header from "../components/Header";
 import checklist from "../images/checklist.svg";
+import { useNavigate } from "react-router-dom";
 
 export default function CheckListPage() {
+  const navigate = useNavigate();
   return (
     <Box
       sx={{
@@ -208,6 +210,7 @@ export default function CheckListPage() {
               borderRadius: "20px",
               alignSelf: "center",
             }}
+            onClick={() => navigate("/resources")}
           >
             Go to Resources
           </Button>
