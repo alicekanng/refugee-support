@@ -87,6 +87,7 @@ export default function StatusPage() {
                 lineHeight: "100%",
                 fontWeight: 500,
               }}
+              onClick={() => navigate("/ukraine")}
             >
               I am looking to start the refugee status process
             </Typography>
