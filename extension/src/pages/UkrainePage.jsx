@@ -76,6 +76,7 @@ export default function UkrainePage() {
                   borderRadius: "20px",
                   alignSelf: "center",
                 }}
+                onClick={() => navigate("/checklist")}
               >
                 No
               </Button>
