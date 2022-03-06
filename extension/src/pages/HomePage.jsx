@@ -1,6 +1,6 @@
 import { Typography, Box, Button, Grid } from "@mui/material";
-import logo from "../logo.svg";
-import startImage from "../startImg.svg";
+import logo from "../images/logo.svg";
+import startImage from "../images/startImg.svg";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useNavigate } from "react-router-dom";
 
@@ -50,6 +50,7 @@ export default function HomePage() {
             fontWeight: 600,
             textTransform: "none",
             boxShadow: "0px 2px 3px 0px #74bafe",
+            borderRadius: "20px",
           }}
           onClick={() => navigate("/status")}
         >

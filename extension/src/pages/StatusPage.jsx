@@ -1,10 +1,12 @@
 import { Typography, Box, Button, Grid } from "@mui/material";
-import logo from "../logo.svg";
-import approved from "../approved.svg";
-import unapproved from "../unapproved.svg";
+import logo from "../images/logo.svg";
+import approved from "../images/approved.svg";
+import unapproved from "../images/unapproved.svg";
 import MenuIcon from "@mui/icons-material/Menu";
+import { useNavigate } from "react-router-dom";
 
 export default function StatusPage() {
+  const navigate = useNavigate();
   return (
     <Box
       sx={{
@@ -46,6 +48,7 @@ export default function StatusPage() {
                 lineHeight: "100%",
                 fontWeight: 500,
               }}
+              onClick={() => navigate("/login")}
             >
               I have already been approved for refugee status
             </Typography>
